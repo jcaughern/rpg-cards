@@ -1,42 +1,58 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  background-color: #A0AECD;
   color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+#cardContainer {
+  display: flex;
+  flex-direction: row;
+  width: 75vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  box-sizing: border-box;
+  width: 25vw;
+  height: 35vw;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeaderTop,
+.cardHeaderBottom {
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-direction:  */
+}
+
+.card h2 {
+  font-size: 1.5rem;
+}
+
+.card h4 {
+  font-size: 1rem;
+}
+
+.card h5 {
+  font-size: 0.75rem;
+}
+
+.cardBody {
+  font-size: 0.75rem;
 }
