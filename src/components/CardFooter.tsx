@@ -6,7 +6,7 @@ type CardFooterProps = {
 };
 
 const CardFooter = ({ level, school }: CardFooterProps) => (
-  <div>{`${level} ${school}`}</div>
+  <footer className="cardFooter">{`${level} ${school}`}</footer>
 );
 
 export default CardFooter;

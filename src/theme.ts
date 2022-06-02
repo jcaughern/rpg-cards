@@ -1,32 +1,15 @@
-interface Theme {
-  light: {
-    primary: string;
-    secondary: string;
-  };
-  dark: {
-    primary: string;
-    secondary: string;
-  };
-  cardFonts: {
-    '& h2': {
-      fontSize: string;
-    };
-  };
-}
+import type { Theme } from '@emotion/react';
 
 const theme: Theme = {
-  light: {
-    primary: 'gray',
-    secondary: 'red',
-  },
-  dark: {
-    primary: 'black',
-    secondary: 'red',
-  },
-  cardFonts: {
-    '& h2': {
-      fontSize: '1.5rem',
-    },
+  cardColors: {
+    Conjuration: 'orange',
+    Necromancy: 'black',
+    Evocation: 'red',
+    Abjuration: 'blue',
+    Transmutation: 'green',
+    Divination: 'white',
+    Enchantment: 'yellow',
+    Illusion: 'purple',
   },
 };
 
