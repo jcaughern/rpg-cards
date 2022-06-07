@@ -1,5 +1,5 @@
 import React from 'react';
-import { jsx, css, useTheme, Theme } from '@emotion/react';
+import { css, useTheme, Theme } from '@emotion/react';
 import CardHeader from './CardHeader';
 import CardBody from './CardBody';
 import CardFooter from './CardFooter';
@@ -12,8 +12,21 @@ type CardProps = {
 const Card = ({ spell }: CardProps) => {
   const { desc, school, level } = spell;
   const theme = useTheme();
+
+  function isInThemeProperty<K extends keyof Theme, T extends keyof Theme[K]>(
+    val: unknown,
+    property: K
+  ): val is T {
+    const castVal = val as T;
+    return theme[property][castVal] !== undefined;
+  }
+
+  const cardColor = isInThemeProperty(school, 'cardColors')
+    ? theme.cardColors[school]
+    : theme.cardColors.default;
+
   const cardFrameStyle = css({
-    backgroundColor: theme.cardColors[school as keyof Theme['cardColors']],
+    backgroundColor: cardColor,
   });
 
   return (

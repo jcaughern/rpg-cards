@@ -6,7 +6,9 @@ type CardFooterProps = {
 };
 
 const CardFooter = ({ level, school }: CardFooterProps) => (
-  <footer className="cardFooter">{`${level} ${school}`}</footer>
+  <footer className="cardFooter">
+    {level === 'Cantrip' ? `${school} ${level}` : `${level} ${school}`}
+  </footer>
 );
 
 export default CardFooter;

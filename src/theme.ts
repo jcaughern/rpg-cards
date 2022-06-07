@@ -10,6 +10,7 @@ const theme: Theme = {
     Divination: 'white',
     Enchantment: 'yellow',
     Illusion: 'purple',
+    default: 'gray',
   },
 };
 

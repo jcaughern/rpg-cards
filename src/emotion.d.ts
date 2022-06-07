@@ -11,6 +11,7 @@ declare module '@emotion/react' {
       Divination: string;
       Enchantment: string;
       Illusion: string;
+      default: string;
     };
   }
 }
