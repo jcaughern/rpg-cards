@@ -1,0 +1,5 @@
+services:
+  sql:
+    image: "mysql:latest"
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
