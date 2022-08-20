@@ -20,6 +20,7 @@ interface Spell {
   document__slug: string;
   document__title: string;
   document__license_url: string;
+  extended: boolean;
 }
 
 export default Spell;

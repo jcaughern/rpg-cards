@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 
 const menuStyle = css({
   position: 'fixed',
-  height: '80%',
+  height: '100%',
   maxWidth: '90%',
   width: 275,
   zIndex: 10,
@@ -12,7 +12,7 @@ const menuStyle = css({
   '::-webkit-scrollbar': {
     display: 'none',
   },
-  top: 54,
+  top: 52,
   left: 0,
 });
 

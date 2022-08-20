@@ -10,17 +10,31 @@ import theme from './theme';
 import testData from './testData';
 import Card from './components/Cards';
 import CardMenu from './components/CardMenu';
+import type { Spell, Spells } from './types';
 
 const App = () => {
-  const [spells, setSpells] = useState([]);
+  const [spells, setSpells] = useState<Spell[]>([]);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
     setMenuOpen((prev) => !prev);
   };
 
+  async function apiFetch<T>(url: string): Promise<T> {
+    const response = await fetch(url);
+    return response.json<{ data: T }>();
+  }
+
   useEffect(() => {
-    setSpells(JSON.parse(testData).results);
+    // setSpells(JSON.parse(testData).results);
+    apiFetch<Spells>('http://localhost:3001/api/spells/search?class=wizard')
+      .then((response) => {
+        const responseSpells: Spell[] = response.results;
+        setSpells(responseSpells);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   }, []);
 
   return (

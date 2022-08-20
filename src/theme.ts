@@ -7,7 +7,7 @@ const theme: Theme = {
     Evocation: 'red',
     Abjuration: 'blue',
     Transmutation: 'green',
-    Divination: 'white',
+    Divination: 'gray',
     Enchantment: 'yellow',
     Illusion: 'purple',
     default: 'gray',

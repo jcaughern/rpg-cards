@@ -23,14 +23,22 @@ const Cards = ({ spells }: CardProps) => {
   }, [viewWidth]);
 
   const containerWidth =
-    15 + Math.ceil(0.75 * viewWidth - ((0.75 * viewWidth) % 300));
+    20 + Math.ceil(0.8 * viewWidth - ((0.8 * viewWidth) % 350));
 
   const containerStyle = css({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    width: containerWidth,
-    maxWidth: '75vw',
+    height: '100%',
+    maxHeight: '100vh',
+    width: containerWidth < 315 ? 315 : containerWidth,
+    maxWidth: containerWidth < 315 ? '100vw' : '80vw',
+    overflowY: 'auto',
+    // '&::-webkit-scrollbar': {
+    //   width: 10,
+    //   height: 10,
+    // },
+    // scrollbarColor: 'black white',
   });
 
   let spellCards;
