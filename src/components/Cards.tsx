@@ -26,7 +26,6 @@ const Cards = ({ spells }: CardProps) => {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    // width: containerWidth,
     maxWidth: '75vw',
     justifyContent: 'center',
   });
