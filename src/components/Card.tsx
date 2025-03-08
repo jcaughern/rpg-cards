@@ -15,7 +15,7 @@ const Card = ({ spell }: CardProps) => {
 
   function isInThemeProperty<K extends keyof Theme, T extends keyof Theme[K]>(
     val: unknown,
-    property: K
+    property: K,
   ): val is T {
     const castVal = val as T;
     return theme[property][castVal] !== undefined;
