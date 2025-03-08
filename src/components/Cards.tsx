@@ -22,14 +22,10 @@ const Cards = ({ spells }: CardProps) => {
     };
   }, [viewWidth]);
 
-  const containerWidth =
-    15 + Math.ceil(0.75 * viewWidth - ((0.75 * viewWidth) % 300));
-
   const containerStyle = css({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    // width: containerWidth,
     maxWidth: '75vw',
     justifyContent: 'center',
   });
